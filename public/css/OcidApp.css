@@ -1,0 +1,249 @@
+body, html {
+  height:100%;
+}
+body, html,table{
+
+}  
+tbody{
+  font-size: 12px
+}
+/*.modal-header{
+  background-color: bisque;
+}*/
+/*timeline*/
+button.dt-button.active {
+        background: #f4a261 !important;
+        color: #fff;
+    }
+
+
+textarea{
+ text-transform: uppercase;
+}
+
+input{
+  text-transform: uppercase;
+}
+
+.modal-header{
+  background-color: #3271a9;
+  color:#fff;
+  font-weight: 900;
+}
+.colorClassRow{
+  background-color: peachpuff !important;
+}
+.history-tl-container{
+    font-family: "Roboto",sans-serif;
+  width:90%;
+  margin:auto;
+  display:block;
+  position:relative;
+}
+.history-tl-container ul.tl{
+    margin:20px 0;
+    padding:0;
+    display:inline-block;
+
+}
+.history-tl-container ul.tl li{
+    list-style: none;
+    margin:auto;
+    margin-left:100px;
+    min-height:50px;
+    /*background: rgba(255,255,0,0.1);*/
+    border-left:1px dashed #86D6FF;
+    padding:0 0 50px 30px;
+    position:relative;
+}
+.history-tl-container ul.tl li:last-child{ border-left:0;}
+.history-tl-container ul.tl li::before{
+    position: absolute;
+    left: -11px;
+    top: -5px;
+    content: " ";
+    border: 8px solid rgba(255, 255, 255, 0.74);
+    border-radius: 500%;
+    background: #258CC7;
+    height: 20px;
+    width: 20px;
+    transition: all 500ms ease-in-out;
+
+}
+.history-tl-container ul.tl li:hover::before{
+    border-color:  #258CC7;
+    transition: all 1000ms ease-in-out;
+}
+ul.tl li .item-title{
+}
+ul.tl li .item-detail{
+    color:rgba(0,0,0,0.5);
+    font-size:12px;
+}
+ul.tl li .timestamp{
+    color: #8D8D8D;
+    position: absolute;
+  width:100px;
+    margin-left: -150px;
+    text-align: right;
+    font-size: 12px;
+}
+/*endTimelin*/
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  background: darkslateblue;
+  border-bottom: 2px solid green;
+  color: #fff; 
+  opacity: 1;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+  background: darkslateblue;
+  border-bottom: 2px solid green;
+  color: #fff;
+  opacity: 0.4;
+}
+
+
+
+[data-tip] {
+  position:relative;
+
+}
+[data-tip]:before {
+  content:'';
+  /* hides the tooltip when not hovered */
+  display:none;
+  content:'';
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #1a1a1a; 
+  position:absolute;
+  top:30px;
+  left:35px;
+  z-index:8;
+  font-size:0;
+  line-height:0;
+  width:0;
+  height:0;
+}
+[data-tip]:after {
+  display:none;
+  content:attr(data-tip);
+  position:absolute;
+  top:35px;
+  left:0px;
+  padding:5px 8px;
+  background:#1a1a1a;
+  color:#fff;
+  z-index:9;
+  font-size: 0.75em;
+  height:30px;
+  line-height:18px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  white-space:nowrap;
+  word-wrap:normal;
+}
+[data-tip]:hover:before,
+[data-tip]:hover:after {
+  display:block;
+}
+
+/*
+ * Off Canvas sidebar at medium breakpoint
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 992px) {
+
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -33%;
+    height: 100%;
+  }
+
+  .row-offcanvas-left.active {
+    left: 33%;
+    margin-left: -6px;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+/*
+ * Off Canvas wider at sm breakpoint
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 34em) {
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -45%;
+    height: 100vh;
+  }
+
+  .row-offcanvas-left.active {
+    left: 45%;
+    margin-left: -6px;
+  }
+  
+  .sidebar-offcanvas {
+    width: 45%;
+    margin-top: -60px;
+    top:70px;
+  }
+}
+
+.card {
+    overflow:hidden;
+}
+
+.card-body .rotate {
+    z-index: 8;
+    float: right;
+    height: 100%;
+}
+
+.card-body .rotate i {
+    color: rgba(20, 20, 20, 0.15);
+    position: absolute;
+    left: 0;
+    left: auto;
+    right: -10px;
+    bottom: 0;
+    display: block;
+    -webkit-transform: rotate(-44deg);
+    -moz-transform: rotate(-44deg);
+    -o-transform: rotate(-44deg);
+    -ms-transform: rotate(-44deg);
+    transform: rotate(-44deg);
+}
+
+.muestraResEnt{
+  position: absolute;
+  top: 60px;left: 0;
+  z-index: 100 !important;
+  background-color: #FBEFEF;
+}
+
+.muestraResEnt .itemResult{
+  background-color: #fff;
+  padding: 10px 10px;
+}
+
+.muestraResEnt .itemResult:hover{
+  opacity: 0.5;
+  cursor:pointer;
+}
